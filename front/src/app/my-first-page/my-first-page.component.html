@@ -1,10 +1,23 @@
-<h1>My first page</h1>
-<div>
-  <h3>Let's try our actions ! <mat-icon [svgIcon]="'emoticon'"></mat-icon></h3>
-  <button color="accent" (click)="sayHelloToServer()" mat-raised-button>Say hello to server</button>
+<div class="full-screen">
+  <mat-card>
+    <mat-card-title>
+      My first page
+    </mat-card-title>
+    <mat-card-content>
+      <h3>Let's try our actions !
+        <mat-icon [svgIcon]="'emoticon'"></mat-icon>
+      </h3>
+      <button color="accent" (click)="sayHelloToServer()" mat-raised-button>Say hello to server</button>
 
-  <div *ngIf="response">
-    Answer from server: <br>
-    {{ response | json }}
-  </div>
+      <mat-card *ngIf="response">
+        <mat-card-content>
+          Answer from server: <br>
+          {{ response | json }}
+        </mat-card-content>
+      </mat-card>
+    </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
 </div>
