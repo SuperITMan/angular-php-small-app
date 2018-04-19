@@ -1,0 +1,10 @@
+<h1>My first page</h1>
+<div>
+  <h3>Let's try our actions ! <mat-icon [svgIcon]="'emoticon'"></mat-icon></h3>
+  <button color="accent" (click)="sayHelloToServer()" mat-raised-button>Say hello to server</button>
+
+  <div *ngIf="response">
+    Answer from server: <br>
+    {{ response | json }}
+  </div>
+</div>

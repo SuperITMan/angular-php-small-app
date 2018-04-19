@@ -1,0 +1,17 @@
+.app-nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.my-awesome-app {
+  top: 56px;
+  bottom:0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+}
