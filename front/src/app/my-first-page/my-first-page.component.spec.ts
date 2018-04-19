@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MyFirstPageComponent } from './my-first-page.component';
+import { AppMaterialModule } from '../app-material.module';
 
 describe('MyFirstPageComponent', () => {
   let component: MyFirstPageComponent;
@@ -8,7 +9,10 @@ describe('MyFirstPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MyFirstPageComponent ]
+      declarations: [ MyFirstPageComponent ],
+      imports: [
+        AppMaterialModule
+      ]
     })
     .compileComponents();
   }));

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, APP_BASE_HREF } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routerConfig } from './app.routes';
 
@@ -11,6 +11,11 @@ import { routerConfig } from './app.routes';
     CommonModule,
     RouterModule.forRoot(routerConfig)
   ],
-  declarations: []
+  declarations: [],
+  providers: [
+    {
+      provide: APP_BASE_HREF, useValue: '/'
+    }
+  ]
 })
 export class AppRoutingModule { }
