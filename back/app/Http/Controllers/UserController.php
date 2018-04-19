@@ -10,7 +10,10 @@ class UserController extends Controller
 
     public function showAllUsers()
     {
-        return response()->json(User::all());
+//        $message=shell_exec("/mnt/d/DEV/GIT/MINE/angular-php-small-app/testscript.sh 2>&1");
+        $message=shell_exec("../../testscript.sh 2>&1");
+        return response()->json($message);
+//        return response()->json(User::all());
     }
 
     public function showOneUser($id)

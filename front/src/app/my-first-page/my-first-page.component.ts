@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MyFirstPageComponent implements OnInit {
 
-  response: string;
+  response: object;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -16,10 +16,10 @@ export class MyFirstPageComponent implements OnInit {
   }
 
   sayHelloToServer() {
-    this.httpClient.get("https://a585e16f-3100-46a2-a9fa-5ced9fbe86f1.mock.pstmn.io/test").subscribe(
+    this.httpClient.get("http://localhost:8083/api/test").subscribe(
       (value: object) => {
         console.log("Value received: ", value);
-        this.response = value.toString();
+        this.response = value;
       }
     )
   }
