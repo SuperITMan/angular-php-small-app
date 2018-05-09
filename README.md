@@ -21,11 +21,17 @@ You need:
 During my install, I also installed those but I'm not sure they are needed...
 > php-ext-dom AND/OR php-xml
 
+#### Summary 
+To install everything needed in point of vue of the backend, please run the following command
+> apt install composer php php-mysql php-mbstring php-xml mysql
+
 ### Installation
 It's time to install php dependencies thanks to [Composer](https://getcomposer.org) via the following command
 > composer install
 
 Then copy .env.example file in .env and edit informations for your config.
+
+Of course, in your apache configuration you will expose only the public folder of the back folder. 
 
 ## Front-End
 Based on [Angular](https://angular.io/) + [Angular Material](https://material.angular.io/), the front-end is really easy to use and implement.
@@ -40,3 +46,12 @@ For running the front-end via Apache, you should follow those steps:
 1) run ```npm install``` into your frontend project
 2) run ```ng build --aot``` for building the project
 3) Copy the content of **dist** folder into your Apache.
+
+### Install of npm
+If you don't have yet npm and nodejs installed on your linux, please install [nvm](https://github.com/creationix/nvm). 
+Please run the following commands :
+> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+> nvm install 8
+> nvm use 8
+
+Voilà! Npm is now available on your linux :smiley:
